@@ -1,0 +1,14 @@
+# ninja log v5
+10	3005	7961663969000734	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	a921268b64f36210
+80	719	7961663946072016	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	33dab0fb22681464
+27	2873	7961663967702761	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	28e83aa3468e517e
+720	1117	7961663949093145	D:/_Mine/SyndicateGroup/P-195_High_Roller_Airship_IOS/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3h1w5o2j/obj/arm64-v8a/libswappywrapper.so	fc7d548779e28ae9
+57	2476	7961663963714505	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	811a74a763bace33
+17	2494	7961663963886545	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	33101e50b53fdcb9
+3005	3138	7961663970317269	D:/_Mine/SyndicateGroup/P-195_High_Roller_Airship_IOS/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3h1w5o2j/obj/arm64-v8a/libgame.so	c92700f25de8c83e
+69	2818	7961663967163595	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c3198562ac0ffc74
+1	2528	7961663964248378	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	354c3629b59a53d4
+36	2618	7961663965150909	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	531cafbb4f69bd5d
+46	2555	7961663964522910	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	c203ec00def0ab38
+1	121	7961696044287745	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	33dab0fb22681464
+121	229	7961696045322512	D:/_Mine/SyndicateGroup/P-195_High_Roller_Airship_IOS/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3h1w5o2j/obj/arm64-v8a/libswappywrapper.so	fc7d548779e28ae9
