@@ -1169,7 +1169,7 @@ GameObject:
   - component: {fileID: 638051974}
   - component: {fileID: 638051973}
   m_Layer: 0
-  m_Name: Details Counter
+  m_Name: Parts Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2333,7 +2333,7 @@ GameObject:
   - component: {fileID: 1118994840}
   - component: {fileID: 1118994839}
   m_Layer: 0
-  m_Name: Detail Pool 3
+  m_Name: Part Pool 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2467,7 +2467,7 @@ GameObject:
   - component: {fileID: 1222696351}
   - component: {fileID: 1222696350}
   m_Layer: 0
-  m_Name: Detail Pool 1
+  m_Name: Part Pool 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2620,7 +2620,7 @@ MonoBehaviour:
   _spawner: {fileID: 1610948891}
   _player: {fileID: 1354175344104050176}
   _scoreText: {fileID: 1366934194}
-  _detailsText: {fileID: 638051973}
+  _partsText: {fileID: 638051973}
 --- !u!1 &1313964925
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,7 +3072,7 @@ GameObject:
   - component: {fileID: 1432311442}
   - component: {fileID: 1432311441}
   m_Layer: 0
-  m_Name: Detail Pool 2
+  m_Name: Part Pool 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3399,13 +3399,13 @@ MonoBehaviour:
   - {fileID: 738685761}
   - {fileID: 1375856163}
   - {fileID: 1775798400}
-  _detailPools:
+  _partsPools:
   - {fileID: 1222696350}
   - {fileID: 1432311441}
   - {fileID: 1118994839}
   _spawnArea: {fileID: 1905865122}
   ObstacleSpawnInterval: 2
-  DetailSpawnInterval: 4.5
+  PartSpawnInterval: 4.5
   MinDistanceBetweenSpawns: 150
 --- !u!4 &1610948892
 Transform:
@@ -4215,6 +4215,7 @@ GameObject:
   - component: {fileID: 5897700904140826883}
   - component: {fileID: 9074996501335184039}
   - component: {fileID: 1354175344104050176}
+  - component: {fileID: 9074996501335184040}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4388,7 +4389,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 265, y: 220}
+  m_Size: {x: 265, y: 210}
   m_EdgeRadius: 0
 --- !u!1 &5971352909085244499
 GameObject:
@@ -4647,6 +4648,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &9074996501335184040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5304858034070203646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95238f15b2b2e1b4998bf127a15157cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameCore.PlayerSkinApplier
+  _playerImage: {fileID: 7819140131145486708}
+  _skinSprites:
+  - {fileID: 21300000, guid: 91bb8d7f618758b468f15972d4f826a1, type: 3}
+  - {fileID: 21300000, guid: 23bec5392bfae304d82f83481d6674de, type: 3}
+  - {fileID: 21300000, guid: 682858cc75e0ea849afd882fe3e0312e, type: 3}
+  - {fileID: 21300000, guid: ade6d2c1c72b2004d9c67a46008f6da1, type: 3}
+  - {fileID: 21300000, guid: 169c21f6b69d8c849b6c93894ddd8c57, type: 3}
+  - {fileID: 21300000, guid: 7fbfbc0d0a25d3245af5841b5717a323, type: 3}
 --- !u!114 &9075451926093447336
 MonoBehaviour:
   m_ObjectHideFlags: 0

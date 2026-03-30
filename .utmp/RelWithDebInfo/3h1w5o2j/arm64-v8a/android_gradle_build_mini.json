@@ -5,14 +5,14 @@
   ],
   "cleanCommandsComponents": [
     [
-      "C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.11f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+      "D:\\Program Files\\Unity\\Hub\\Editor\\6000.3.11f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
       "-C",
       "D:\\_Mine\\SyndicateGroup\\P-195_High_Roller_Airship_IOS\\.utmp\\RelWithDebInfo\\3h1w5o2j\\arm64-v8a",
       "clean"
     ]
   ],
   "buildTargetsCommandComponents": [
-    "C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.11f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
+    "D:\\Program Files\\Unity\\Hub\\Editor\\6000.3.11f1\\Editor\\Data\\PlaybackEngines\\AndroidPlayer\\SDK\\cmake\\3.22.1\\bin\\ninja.exe",
     "-C",
     "D:\\_Mine\\SyndicateGroup\\P-195_High_Roller_Airship_IOS\\.utmp\\RelWithDebInfo\\3h1w5o2j\\arm64-v8a",
     "{LIST_OF_TARGETS_TO_BUILD}"

@@ -50,7 +50,7 @@ namespace GameCore.Objects
 
             if (obj.TryGetComponent(out Obstacle obstacle))
                 obstacle.OnGetFromPool(this);
-            else if (obj.TryGetComponent(out Detail egg))
+            else if (obj.TryGetComponent(out Parts egg))
                 egg.OnGetFromPool(this);
 
             _activeObjects.Add(obj);

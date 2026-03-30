@@ -9,7 +9,7 @@ namespace GameCore
 
         public int CurrentScore { get; private set; } = 0;
         public int BestScore { get; private set; } = 0;
-        public int CurrentDetails { get; private set; } = 0;
+        public int CurrentParts { get; private set; } = 0;
         public bool IsGameActive { get; private set; } = true;
 
         [SerializeField] private View.UI.UIScreen _winScreen;
@@ -17,7 +17,7 @@ namespace GameCore
         [SerializeField] private Objects.ObstacleSpawner _spawner;
         [SerializeField] private PlayerController _player;
         [SerializeField] private TMP_Text _scoreText;
-        [SerializeField] private TMP_Text _detailsText;
+        [SerializeField] private TMP_Text _partsText;
 
         private readonly float ScorePerSecond = 1f;
         private float _scoreAccumulator = 0f;
@@ -56,9 +56,9 @@ namespace GameCore
             }
         }
 
-        public void AddDetails(int amount = 1)
+        public void AddParts(int amount = 1)
         {
-            CurrentDetails += amount;
+            CurrentParts += amount;
             UpdateScoreUI();
         }
 
@@ -70,7 +70,7 @@ namespace GameCore
 
             foreach (var pool in _spawner.ObstaclePools)
                 pool.ResetPool();
-            foreach (var pool in _spawner.DetailPools)
+            foreach (var pool in _spawner.PartPools)
                 pool.ResetPool();
 
             _sceneLoader.ChangeScene(Misc.Data.SceneConstants.GAME_SCENE);
@@ -84,7 +84,7 @@ namespace GameCore
 
             foreach (var pool in _spawner.ObstaclePools)
                 pool.ResetPool();
-            foreach (var pool in _spawner.DetailPools)
+            foreach (var pool in _spawner.PartPools)
                 pool.ResetPool();
 
             _sceneLoader.ChangeScene(Misc.Data.SceneConstants.MENU_SCENE);
@@ -122,20 +122,20 @@ namespace GameCore
         private void UpdateScoreUI()
         {
             _scoreText.text = $"Score: {CurrentScore}";
-            _detailsText.text = $"{CurrentDetails}";
+            _partsText.text = $"{CurrentParts}";
         }
 
         private void SaveData()
         {
             PlayerPrefs.SetInt(GameConstants.BEST_SCORE_KEY, BestScore);
-            PlayerPrefs.SetInt(GameConstants.TOTAL_DETAILS_KEY, CurrentDetails);
+            PlayerPrefs.SetInt(GameConstants.TOTAL_PARTS_KEY, CurrentParts);
             PlayerPrefs.Save();
         }
 
         private void LoadData()
         {
             BestScore = PlayerPrefs.GetInt(GameConstants.BEST_SCORE_KEY, 0);
-            CurrentDetails = PlayerPrefs.GetInt(GameConstants.TOTAL_DETAILS_KEY, 0);
+            CurrentParts = PlayerPrefs.GetInt(GameConstants.TOTAL_PARTS_KEY, 0);
         }
     }
 }

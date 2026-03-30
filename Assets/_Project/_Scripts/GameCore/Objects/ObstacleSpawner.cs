@@ -6,18 +6,18 @@ namespace GameCore.Objects
     public class ObstacleSpawner : MonoBehaviour
     {
         [SerializeField] private ObjectPool[] _obstaclePools;
-        [SerializeField] private ObjectPool[] _detailPools;
+        [SerializeField] private ObjectPool[] _partsPools;
 
         public ObjectPool[] ObstaclePools => _obstaclePools;
-        public ObjectPool[] DetailPools => _detailPools;
+        public ObjectPool[] PartPools => _partsPools;
 
         [SerializeField] private RectTransform _spawnArea;
         [SerializeField] private float ObstacleSpawnInterval = 2.0f;
-        [SerializeField] private float DetailSpawnInterval = 4.5f;
+        [SerializeField] private float PartSpawnInterval = 4.5f;
         [SerializeField] private float MinDistanceBetweenSpawns = 150f;
 
         private float _obstacleTimer = 0f;
-        private float _detailTimer = 0f;
+        private float _partTimer = 0f;
 
         private List<Vector2> _recentSpawnPositions;
 
@@ -32,7 +32,7 @@ namespace GameCore.Objects
                 return;
 
             _obstacleTimer += Time.deltaTime;
-            _detailTimer += Time.deltaTime;
+            _partTimer += Time.deltaTime;
 
             if (_obstacleTimer >= ObstacleSpawnInterval)
             {
@@ -53,20 +53,20 @@ namespace GameCore.Objects
                     _recentSpawnPositions.RemoveAt(0);
             }
 
-            if (_detailPools != null && _detailPools.Length > 0 && _detailTimer >= DetailSpawnInterval)
+            if (_partsPools != null && _partsPools.Length > 0 && _partTimer >= PartSpawnInterval)
             {
-                _detailTimer = 0f;
+                _partTimer = 0f;
 
-                Vector2 detailPos = GetValidSpawnPosition();
+                Vector2 partPos = GetValidSpawnPosition();
 
-                int detailIndex = Random.Range(0, _detailPools.Length);
-                GameObject detail = _detailPools[detailIndex].GetObject(_spawnArea);
-                RectTransform detailRect = detail.GetComponent<RectTransform>();
+                int partIndex = Random.Range(0, _partsPools.Length);
+                GameObject part = _partsPools[partIndex].GetObject(_spawnArea);
+                RectTransform partRect = part.GetComponent<RectTransform>();
 
-                detailRect.SetParent(_spawnArea, false);
-                detailRect.anchoredPosition = detailPos;
+                partRect.SetParent(_spawnArea, false);
+                partRect.anchoredPosition = partPos;
 
-                _recentSpawnPositions.Add(detailPos);
+                _recentSpawnPositions.Add(partPos);
                 if (_recentSpawnPositions.Count > 20)
                     _recentSpawnPositions.RemoveAt(0);
             }
